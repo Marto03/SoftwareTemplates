@@ -1,0 +1,17 @@
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\bin\Debug\net8.0-windows\ExpenseExporterApp.exe
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\bin\Debug\net8.0-windows\ExpenseExporterApp.deps.json
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\bin\Debug\net8.0-windows\ExpenseExporterApp.runtimeconfig.json
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\bin\Debug\net8.0-windows\ExpenseExporterApp.dll
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\bin\Debug\net8.0-windows\ExpenseExporterApp.pdb
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.Form1.resources
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.UI.MainForm.resources
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.csproj.GenerateResource.cache
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.AssemblyInfoInputs.cache
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.AssemblyInfo.cs
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.csproj.CoreCompileInputs.cache
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.dll
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\refint\ExpenseExporterApp.dll
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.pdb
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ExpenseExporterApp.genruntimeconfig.cache
+C:\Users\Marto Aleksandrov\Desktop\Sols\software templates\ExpenseExporterApp\ExpenseExporterApp\obj\Debug\net8.0-windows\ref\ExpenseExporterApp.dll

@@ -1,0 +1,335 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\ui\\mainform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\ui\\mainform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\ui\\addexpenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\ui\\addexpenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\export\\expenseexportertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\export\\expenseexportertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\validation\\validationstrategyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\validation\\validationstrategyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\export\\csvexpenseexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\export\\csvexpenseexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\export\\jsonexpenseexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\export\\jsonexpenseexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\export\\xmlexpenseexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\export\\xmlexpenseexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\validation\\customformulavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\validation\\customformulavalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\validation\\percentofsalaryvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\validation\\percentofsalaryvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\models\\validationmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\models\\validationmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\validation\\fixedamountvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\validation\\fixedamountvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\validation\\ivalidationstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\validation\\ivalidationstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|c:\\users\\marto aleksandrov\\desktop\\sols\\software templates\\expenseexporterapp\\expenseexporterapp\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6BAC534-E8E0-4B8F-9138-13D2FA01C04F}|ExpenseExporterApp\\ExpenseExporterApp.csproj|solutionrelative:expenseexporterapp\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.resx",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\MainForm.resx",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\UI\\MainForm.resx",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\MainForm.resx",
+              "RelativeToolTip": "ExpenseExporterApp\\UI\\MainForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-31T21:51:17.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\MainForm.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\UI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\MainForm.cs [Design]",
+              "RelativeToolTip": "ExpenseExporterApp\\UI\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:51:14.073Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Program.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Program.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:50:22.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddExpenseForm.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\AddExpenseForm.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\UI\\AddExpenseForm.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\AddExpenseForm.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\UI\\AddExpenseForm.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAJcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:43:26.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\MainForm.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\UI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\UI\\MainForm.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\UI\\MainForm.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAALYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:43:15.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CsvExpenseExporter.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\CsvExpenseExporter.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Export\\CsvExpenseExporter.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\CsvExpenseExporter.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Export\\CsvExpenseExporter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:43:02.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JsonExpenseExporter.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\JsonExpenseExporter.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Export\\JsonExpenseExporter.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\JsonExpenseExporter.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Export\\JsonExpenseExporter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:42:53.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "XmlExpenseExporter.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\XmlExpenseExporter.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Export\\XmlExpenseExporter.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\XmlExpenseExporter.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Export\\XmlExpenseExporter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:42:45.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExpenseExporterTemplate.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\ExpenseExporterTemplate.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Export\\ExpenseExporterTemplate.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Export\\ExpenseExporterTemplate.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Export\\ExpenseExporterTemplate.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:42:37.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ValidationStrategyFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\ValidationStrategyFactory.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Validation\\ValidationStrategyFactory.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\ValidationStrategyFactory.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Validation\\ValidationStrategyFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:42:17.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomFormulaValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\CustomFormulaValidation.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Validation\\CustomFormulaValidation.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\CustomFormulaValidation.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Validation\\CustomFormulaValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:42:10.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PercentOfSalaryValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\PercentOfSalaryValidation.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Validation\\PercentOfSalaryValidation.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\PercentOfSalaryValidation.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Validation\\PercentOfSalaryValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:42:00.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FixedAmountValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\FixedAmountValidation.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Validation\\FixedAmountValidation.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\FixedAmountValidation.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Validation\\FixedAmountValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:41:49.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IValidationStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\IValidationStrategy.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Validation\\IValidationStrategy.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Validation\\IValidationStrategy.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Validation\\IValidationStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:41:45.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Models\\Expense.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:41:22.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Models\\Employee.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:41:13.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ValidationMode.cs",
+              "DocumentMoniker": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Models\\ValidationMode.cs",
+              "RelativeDocumentMoniker": "ExpenseExporterApp\\Models\\ValidationMode.cs",
+              "ToolTip": "C:\\Users\\Marto Aleksandrov\\Desktop\\Sols\\software templates\\ExpenseExporterApp\\ExpenseExporterApp\\Models\\ValidationMode.cs",
+              "RelativeToolTip": "ExpenseExporterApp\\Models\\ValidationMode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T21:41:00.945Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
