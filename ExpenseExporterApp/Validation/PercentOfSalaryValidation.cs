@@ -20,7 +20,7 @@ namespace ExpenseExporterApp.Validation
                 return true;
             }
 
-            error = $"Разходът {expense.Amount:F2} надвишава {_percent:P0} от заплатата ({limit:F2}) за {employee.FullName}.";
+            error = $"Expense {expense.Amount:F2} exceeds {_percent:P0} of salary ({limit:F2}) for {employee.FullName}.";
             return false;
         }
     }

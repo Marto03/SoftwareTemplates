@@ -13,13 +13,13 @@ namespace ExpenseExporterApp.Export
             var validExpenses = new List<Expense>();
             var errors = new List<string>();
 
-            // 1. валидация
+            // 1. Validation
             foreach (var expense in expenses)
             {
                 var employee = FindEmployee(employees, expense.EmployeeId);
                 if (employee == null)
                 {
-                    errors.Add($"Няма служител с Id={expense.EmployeeId} за разход {expense.Id}.");
+                    errors.Add($"No employee with Id={expense.EmployeeId} for expense {expense.Id}.");
                     continue;
                 }
 
@@ -28,17 +28,16 @@ namespace ExpenseExporterApp.Export
                 {
                     validExpenses.Add(expense);
                 }
-                else
+                else if (!string.IsNullOrEmpty(error))
                 {
-                    if (!string.IsNullOrEmpty(error))
-                        errors.Add(error!);
+                    errors.Add(error!);
                 }
             }
 
-            // 2. трансформация към DTO / сериализация
+            // 2. Serialization
             var serialized = Serialize(validExpenses, employees);
 
-            // 3. запис
+            // 3. Write to file
             File.WriteAllText(outputPath, serialized);
 
             return new ExportResult

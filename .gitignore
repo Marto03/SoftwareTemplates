@@ -1,0 +1,44 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.cache
+*.db
+*.db-shm
+*.db-wal
+
+# Copilot snapshots
+.vscode/
+.vs/CopilotSnapshots/
+
+# Logs
+*.log
+
+# Backup and temporary files
+*.tmp
+*.bak
+*.old
+
+# Publish artifacts
+*.publish.xml
+
+# Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Other
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build output
+bin/
+obj/

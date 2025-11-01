@@ -12,7 +12,7 @@ namespace ExpenseExporterApp.Validation
                 ValidationMode.PercentOfSalary => new PercentOfSalaryValidation(employee.MaxPercentOfSalary),
                 ValidationMode.CustomFormula when !string.IsNullOrWhiteSpace(employee.CustomFormula)
                     => new CustomFormulaValidation(employee.CustomFormula!),
-                _ => new FixedAmountValidation(0) // всичко ще фейлва
+                _ => new FixedAmountValidation(0) // all will fail
             };
         }
     }

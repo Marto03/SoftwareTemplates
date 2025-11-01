@@ -1,50 +1,79 @@
 ﻿using ExpenseExporterApp.Models;
-using Microsoft.VisualBasic;
+using ExpenseExporterApp.Validation; // added
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ExpenseExporterApp.UI
 {
     public partial class AddExpenseForm : Form
     {
         private readonly IList<Employee> _employees;
+        private readonly Expense? _editingExpense;
         public Expense CreatedExpense { get; private set; } = new Expense();
 
-        public AddExpenseForm(IList<Employee> employees)
+        public AddExpenseForm(IList<Employee> employees, Expense? editingExpense = null)
         {
             _employees = employees;
+            _editingExpense = editingExpense;
             InitializeComponent();
             cbEmployee.DataSource = _employees;
             cbEmployee.DisplayMember = "FullName";
             cbEmployee.ValueMember = "Id";
             dtpDate.Value = DateTime.Today;
+            if (_editingExpense != null)
+            {
+                CreatedExpense = _editingExpense;
+                cbEmployee.SelectedItem = _employees.FirstOrDefault(e => e.Id == _editingExpense.EmployeeId);
+                txtDescription.Text = _editingExpense.Description;
+                txtAmount.Text = _editingExpense.Amount.ToString();
+                dtpDate.Value = _editingExpense.Date;
+                btnOk.Text = "Save";
+                this.Text = "Edit Expense";
+            }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (cbEmployee.SelectedItem is not Employee emp)
             {
-                MessageBox.Show("Избери служител.");
+                MessageBox.Show("Select employee.");
                 return;
             }
-
             if (!decimal.TryParse(txtAmount.Text, out var amount))
             {
-                MessageBox.Show("Сумата е невалидна.");
+                MessageBox.Show("Amount is invalid.");
                 return;
             }
 
-            CreatedExpense = new Expense
+            var candidate = _editingExpense ?? new Expense { Id = _editingExpense?.Id ?? new Random().Next(1000, 9999) };
+            candidate.EmployeeId = emp.Id;
+            candidate.Description = txtDescription.Text;
+            candidate.Amount = amount;
+            candidate.Date = dtpDate.Value.Date;
+
+            // Validation using strategy
+            var strategy = ValidationStrategyFactory.CreateFor(emp);
+            if (!strategy.IsValid(emp, candidate, out var validationError))
             {
-                Id = new Random().Next(1000, 9999),
-                EmployeeId = emp.Id,
-                Description = txtDescription.Text,
-                Amount = amount,
-                Date = dtpDate.Value.Date
-            };
+                MessageBox.Show(validationError ?? "Expense invalid.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // do not accept
+            }
+
+            if (_editingExpense != null)
+            {
+                // apply changes to existing
+                _editingExpense.EmployeeId = candidate.EmployeeId;
+                _editingExpense.Description = candidate.Description;
+                _editingExpense.Amount = candidate.Amount;
+                _editingExpense.Date = candidate.Date;
+                CreatedExpense = _editingExpense;
+            }
+            else
+            {
+                CreatedExpense = candidate;
+            }
 
             DialogResult = DialogResult.OK;
             Close();
@@ -114,23 +143,23 @@ namespace ExpenseExporterApp.UI
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 27);
             this.btnOk.TabIndex = 4;
-            this.btnOk.Text = "Добави";
+            this.btnOk.Text = "Add";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // labels
             // 
             this.lblEmployee.AutoSize = true;
             this.lblEmployee.Location = new System.Drawing.Point(12, 15);
-            this.lblEmployee.Text = "Служител:";
+            this.lblEmployee.Text = "Employee:";
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(12, 53);
-            this.lblDescription.Text = "Описание:";
+            this.lblDescription.Text = "Description:";
             this.lblAmount.AutoSize = true;
             this.lblAmount.Location = new System.Drawing.Point(12, 91);
-            this.lblAmount.Text = "Сума:";
+            this.lblAmount.Text = "Amount:";
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(12, 132);
-            this.lblDate.Text = "Дата:";
+            this.lblDate.Text = "Date:";
             // 
             // AddExpenseForm
             // 
@@ -145,7 +174,7 @@ namespace ExpenseExporterApp.UI
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.cbEmployee);
             this.Name = "AddExpenseForm";
-            this.Text = "Нов разход";
+            this.Text = "New Expense";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

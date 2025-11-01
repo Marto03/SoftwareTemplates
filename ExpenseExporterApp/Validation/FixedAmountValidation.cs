@@ -19,7 +19,7 @@ namespace ExpenseExporterApp.Validation
                 return true;
             }
 
-            error = $"Разходът {expense.Amount:F2} надвишава фиксирания лимит {_maxAmount:F2} за {employee.FullName}.";
+            error = $"Expense {expense.Amount:F2} exceeds fixed limit {_maxAmount:F2} for {employee.FullName}.";
             return false;
         }
     }

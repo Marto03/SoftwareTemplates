@@ -7,17 +7,17 @@
         public string Position { get; set; } = "";
         public decimal Salary { get; set; }
 
-        // как да валидираме разходите му
+        // Expense validation mode
         public ValidationMode ValidationMode { get; set; }
 
-        // за Fixed
+        // For FixedAmount
         public decimal MaxAllowedAmount { get; set; }
 
-        // за PercentOfSalary (примерно 0.3m == 30%)
+        // For PercentOfSalary (e.g. 0.3m == 30%)
         public decimal MaxPercentOfSalary { get; set; }
 
-        // за Custom
-        // пример: "AMOUNT <= SALARY * 0.4"
+        // For CustomFormula
+        // Example: "AMOUNT <= SALARY * 0.4"
         public string? CustomFormula { get; set; }
     }
 }

@@ -1,18 +1,24 @@
 ﻿using ExpenseExporterApp.Models;
 using System.Globalization;
-
+using System.Text.RegularExpressions;
 
 namespace ExpenseExporterApp.Validation
 {
     /// <summary>
-    /// За да не вкарваме скриптове, ще направим много прост парсър, който разбира само такива формули:
-    /// AMOUNT <= 0.5 * SALARY
-    /// AMOUNT <= 200
-    /// интервали не са задължителни
+    /// Parser for simple formulas enforcing constraint: AMOUNT <= expression.
+    /// Supported expression forms (case-insensitive, spaces ignored):
+    ///   AMOUNT <= 200
+    ///   AMOUNT <= 0.5 * SALARY
+    ///   AMOUNT <= SALARY * 0.5
+    ///   AMOUNT <= 50% * SALARY   (interpreted as 0.5 * SALARY)
+    ///   AMOUNT <= SALARY * 50%   (interpreted as SALARY * 0.5)
+    ///   AMOUNT <= SALARY         (limit equals salary)
+    /// Decimal separator '.' or current culture separator accepted.
     /// </summary>
     public class CustomFormulaValidation : IValidationStrategy
     {
         private readonly string _formula;
+        private static readonly Regex PercentRegex = new("^(?<num>\\d+(?:[\\.,]\\d+)?)%$", RegexOptions.Compiled);
 
         public CustomFormulaValidation(string formula)
         {
@@ -21,61 +27,68 @@ namespace ExpenseExporterApp.Validation
 
         public bool IsValid(Employee employee, Expense expense, out string? error)
         {
-            // поддържаме само "AMOUNT <= <expr>"
-            // където <expr> може да е:
-            //  - число: 200
-            //  - коефициент * SALARY: 0.4 * SALARY
-            //  - SALARY * коефициент: SALARY * 0.4
-
-            var normalized = _formula.Replace(" ", "", StringComparison.OrdinalIgnoreCase)
-                                     .ToUpperInvariant();
-
-            const string left = "AMOUNT<=";
-            if (!normalized.StartsWith(left))
+            var raw = _formula.Trim();
+            if (string.IsNullOrWhiteSpace(raw))
             {
-                error = $"Неподдържана формула: {_formula}";
+                error = "Unsupported formula: (empty)";
                 return false;
             }
 
-            var rightExpr = normalized.Substring(left.Length);
+            // Normalize case for tokens but keep numeric patterns; remove redundant spaces around '*'
+            // We'll operate on a condensed version for parsing of the right side.
+            var idx = raw.IndexOf("<=", StringComparison.OrdinalIgnoreCase);
+            if (idx < 0)
+            {
+                error = $"Unsupported formula: {_formula}";
+                return false;
+            }
+            var left = raw.Substring(0, idx).Trim();
+            var rightOriginal = raw.Substring(idx + 2).Trim();
+            if (!left.Equals("AMOUNT", StringComparison.OrdinalIgnoreCase))
+            {
+                error = $"Unsupported formula: {_formula}. Left side must be AMOUNT.";
+                return false;
+            }
+
+            // Collapse spaces around '*'
+            var right = Regex.Replace(rightOriginal, @"\s*\*\s*", "*");
+            right = right.Trim();
 
             decimal limit;
-
-            if (rightExpr.Contains("SALARY"))
+            if (right.Equals("SALARY", StringComparison.OrdinalIgnoreCase))
             {
-                // примерно 0.4*SALARY или SALARY*0.4
-                if (rightExpr.StartsWith("SALARY*"))
+                limit = employee.Salary;
+            }
+            else if (right.Contains('*'))
+            {
+                var parts = right.Split('*');
+                if (parts.Length != 2)
                 {
-                    var coefStr = rightExpr.Substring("SALARY*".Length);
-                    if (!decimal.TryParse(coefStr, NumberStyles.Any, CultureInfo.InvariantCulture, out var coef))
-                    {
-                        error = $"Неподдържана формула: {_formula}";
-                        return false;
-                    }
-                    limit = employee.Salary * coef;
-                }
-                else if (rightExpr.EndsWith("*SALARY"))
-                {
-                    var coefStr = rightExpr.Substring(0, rightExpr.Length - "*SALARY".Length);
-                    if (!decimal.TryParse(coefStr, NumberStyles.Any, CultureInfo.InvariantCulture, out var coef))
-                    {
-                        error = $"Неподдържана формула: {_formula}";
-                        return false;
-                    }
-                    limit = employee.Salary * coef;
-                }
-                else
-                {
-                    error = $"Неподдържана формула: {_formula}";
+                    error = $"Unsupported formula: {_formula}";
                     return false;
                 }
+                var pA = parts[0].Trim();
+                var pB = parts[1].Trim();
+                bool aSalary = pA.Equals("SALARY", StringComparison.OrdinalIgnoreCase);
+                bool bSalary = pB.Equals("SALARY", StringComparison.OrdinalIgnoreCase);
+                if (aSalary == bSalary) // must be exactly one salary operand
+                {
+                    error = $"Unsupported formula: {_formula}. Provide one SALARY operand and one numeric/percent operand.";
+                    return false;
+                }
+                var coefStr = aSalary ? pB : pA;
+                if (!TryParseNumberOrPercent(coefStr, out var coef))
+                {
+                    error = $"Unsupported formula: {_formula}. Could not parse coefficient '{coefStr}'.";
+                    return false;
+                }
+                limit = employee.Salary * coef;
             }
             else
             {
-                // само число
-                if (!decimal.TryParse(rightExpr, NumberStyles.Any, CultureInfo.InvariantCulture, out limit))
+                if (!TryParseNumberOrPercent(right, out limit))
                 {
-                    error = $"Неподдържана формула: {_formula}";
+                    error = $"Unsupported formula: {_formula}. Could not parse numeric value '{right}'.";
                     return false;
                 }
             }
@@ -86,7 +99,30 @@ namespace ExpenseExporterApp.Validation
                 return true;
             }
 
-            error = $"Разходът {expense.Amount:F2} надвишава формулата \"{_formula}\" (лимит {limit:F2}) за {employee.FullName}.";
+            error = $"Expense {expense.Amount:F2} exceeds formula \"{_formula}\" (limit {limit:F2}) for {employee.FullName}.";
+            return false;
+        }
+
+        private static bool TryParseNumberOrPercent(string input, out decimal value)
+        {
+            input = input.Trim();
+            var m = PercentRegex.Match(input);
+            if (m.Success)
+            {
+                var numPart = m.Groups["num"].Value.Replace(',', '.');
+                if (decimal.TryParse(numPart, NumberStyles.Any, CultureInfo.InvariantCulture, out var pct))
+                {
+                    value = pct / 100m;
+                    return true;
+                }
+            }
+            var normalized = input.Replace(',', '.');
+            if (decimal.TryParse(normalized, NumberStyles.Any, CultureInfo.InvariantCulture, out var num))
+            {
+                value = num;
+                return true;
+            }
+            value = 0;
             return false;
         }
     }
