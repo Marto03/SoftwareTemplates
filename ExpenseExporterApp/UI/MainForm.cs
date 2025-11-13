@@ -192,22 +192,13 @@ namespace ExpenseExporterApp.UI
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            ExpenseExporterTemplate exporter = cbFormat.SelectedItem switch
-            {
-                "XML" => new XmlExpenseExporter(),
-                "JSON" => new JsonExpenseExporter(),
-                "CSV" => new CsvExpenseExporter(),
-                _ => new JsonExpenseExporter()
-            };
+            // Use factory instead of switch for exporter creation and for defaultFileName (Factory pattern)
+            var (exporter, defaultFileName) = ExporterFactory.Create((string)cbFormat.SelectedItem!);
 
-            using var sfd = new SaveFileDialog();
-            sfd.Filter = "All files|*.*";
-            sfd.FileName = cbFormat.SelectedItem switch
+            using var sfd = new SaveFileDialog
             {
-                "XML" => "expenses.xml",
-                "JSON" => "expenses.json",
-                "CSV" => "expenses.csv",
-                _ => "expenses.txt"
+                Filter = "All files|*.*",
+                FileName = defaultFileName
             };
 
             if (sfd.ShowDialog() == DialogResult.OK)

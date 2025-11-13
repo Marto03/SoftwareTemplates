@@ -3,8 +3,12 @@ using System.Xml.Linq;
 
 namespace ExpenseExporterApp.Export
 {
+    /// <summary>
+    /// Concrete exporter for XML format. Implements the serialization variant step of the Template Method.
+    /// </summary>
     public class XmlExpenseExporter : ExpenseExporterTemplate
     {
+        // Serialize method implementation
         protected override string Serialize(IEnumerable<Expense> expenses, IEnumerable<Employee> employees)
         {
             var employeeDict = employees.ToDictionary(e => e.Id, e => e);

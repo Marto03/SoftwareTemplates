@@ -2,6 +2,10 @@
 
 namespace ExpenseExporterApp.Validation
 {
+    /// <summary>
+    /// STRATEGY IMPLEMENTATION: Percent of salary validation.
+    /// Accepts an expense if its amount does not exceed employee.Salary * percent.
+    /// </summary>
     public class PercentOfSalaryValidation : IValidationStrategy
     {
         private readonly decimal _percent;

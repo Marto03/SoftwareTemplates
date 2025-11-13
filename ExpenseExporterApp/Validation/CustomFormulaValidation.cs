@@ -5,15 +5,14 @@ using System.Text.RegularExpressions;
 namespace ExpenseExporterApp.Validation
 {
     /// <summary>
-    /// Parser for simple formulas enforcing constraint: AMOUNT <= expression.
-    /// Supported expression forms (case-insensitive, spaces ignored):
-    ///   AMOUNT <= 200
-    ///   AMOUNT <= 0.5 * SALARY
-    ///   AMOUNT <= SALARY * 0.5
-    ///   AMOUNT <= 50% * SALARY   (interpreted as 0.5 * SALARY)
-    ///   AMOUNT <= SALARY * 50%   (interpreted as SALARY * 0.5)
-    ///   AMOUNT <= SALARY         (limit equals salary)
-    /// Decimal separator '.' or current culture separator accepted.
+    /// STRATEGY IMPLEMENTATION: Custom formula validation.
+    /// Parses user-defined constraint formulas enforcing: AMOUNT = expression.
+    /// Supported forms (case-insensitive, spaces ignored):
+    ///   AMOUNT = 200
+    ///   AMOUNT = 0.5 * SALARY / SALARY * 0.5
+    ///   AMOUNT = 50% * SALARY / SALARY * 50%
+    ///   AMOUNT = SALARY
+    /// Percent values (e.g. 40%) converted to decimal (0.4).
     /// </summary>
     public class CustomFormulaValidation : IValidationStrategy
     {
@@ -34,8 +33,7 @@ namespace ExpenseExporterApp.Validation
                 return false;
             }
 
-            // Normalize case for tokens but keep numeric patterns; remove redundant spaces around '*'
-            // We'll operate on a condensed version for parsing of the right side.
+            // Expect pattern AMOUNT <= <expression>
             var idx = raw.IndexOf("<=", StringComparison.OrdinalIgnoreCase);
             if (idx < 0)
             {
@@ -50,14 +48,13 @@ namespace ExpenseExporterApp.Validation
                 return false;
             }
 
-            // Collapse spaces around '*'
-            var right = Regex.Replace(rightOriginal, @"\s*\*\s*", "*");
-            right = right.Trim();
+            // Normalize multiplication spacing.
+            var right = Regex.Replace(rightOriginal, @"\s*\*\s*", "*").Trim();
 
             decimal limit;
             if (right.Equals("SALARY", StringComparison.OrdinalIgnoreCase))
             {
-                limit = employee.Salary;
+                limit = employee.Salary; // limit equals full salary
             }
             else if (right.Contains('*'))
             {
@@ -71,7 +68,7 @@ namespace ExpenseExporterApp.Validation
                 var pB = parts[1].Trim();
                 bool aSalary = pA.Equals("SALARY", StringComparison.OrdinalIgnoreCase);
                 bool bSalary = pB.Equals("SALARY", StringComparison.OrdinalIgnoreCase);
-                if (aSalary == bSalary) // must be exactly one salary operand
+                if (aSalary == bSalary) // must be exactly one SALARY operand
                 {
                     error = $"Unsupported formula: {_formula}. Provide one SALARY operand and one numeric/percent operand.";
                     return false;
@@ -112,7 +109,7 @@ namespace ExpenseExporterApp.Validation
                 var numPart = m.Groups["num"].Value.Replace(',', '.');
                 if (decimal.TryParse(numPart, NumberStyles.Any, CultureInfo.InvariantCulture, out var pct))
                 {
-                    value = pct / 100m;
+                    value = pct / 100m; // convert percent to fraction
                     return true;
                 }
             }

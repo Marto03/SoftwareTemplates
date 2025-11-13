@@ -3,8 +3,13 @@ using System.Text.Json;
 
 namespace ExpenseExporterApp.Export
 {
+    /// <summary>
+    /// Concrete exporter implementing the variant step of the Template Method.
+    /// Provides JSON serialization of validated expenses.
+    /// </summary>
     public class JsonExpenseExporter : ExpenseExporterTemplate
     {
+        // Serialize method implementation
         protected override string Serialize(IEnumerable<Expense> expenses, IEnumerable<Employee> employees)
         {
             var employeeDict = employees.ToDictionary(e => e.Id, e => e);

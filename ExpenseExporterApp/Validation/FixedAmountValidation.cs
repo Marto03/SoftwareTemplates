@@ -2,6 +2,10 @@
 
 namespace ExpenseExporterApp.Validation
 {
+    /// <summary>
+    /// STRATEGY IMPLEMENTATION: Fixed amount validation.
+    /// Checks if expense amount is less than or equal to a predefined maximum.
+    /// </summary>
     public class FixedAmountValidation : IValidationStrategy
     {
         private readonly decimal _maxAmount;
